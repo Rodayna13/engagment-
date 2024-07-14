@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Mahy ❤️ Ahmed - 21.7.2024</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="join us on 21st  July 2024 for our Engagment celebration,and we would like you to be a part of it." />
-    <meta name="keywords" content="Mahy,Ahmed,Engagment,website,rsvp" />
+    <meta name="description" content="Join us on 21st July 2024 for our Engagement celebration, and we would like you to be a part of it." />
+    <meta name="keywords" content="Mahy, Ahmed, Engagement, website, rsvp" />
     <meta name="author" content="Mahy & Ahmed" />
     <meta property="og:image:type" content="image/jpeg">
-    <meta property="og:title" content="Mahy & Ahmed Engagment">
-    <meta property="og:description" content="Join us on 21st  July 2024 for our Engagment celebration.">
-    
+    <meta property="og:title" content="Mahy & Ahmed Engagement">
+    <meta property="og:description" content="Join us on 21st July 2024 for our Engagement celebration.">
+
     <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Engagement" rel="stylesheet">
@@ -33,23 +33,21 @@
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="css/style.css">
-    
+
     <!-- Modernizr JS -->
     <script src="js/modernizr-2.6.2.min.js"></script>
     <!-- FOR IE9 below -->
     <!--[if lt IE 9]>
     <script src="js/respond.min.js"></script>
     <![endif]-->
-
-    <script src='https://momentjs.com/downloads/moment.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.14/moment-timezone-with-data-2012-2022.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.js'></script>
 </head>
 <body>
-    <audio controls autoplay hidden>
+    <audio id="audio" preload="auto">
         <source src="WhatsApp Audio 2024-07-14 at 6.01.44 PM.mpeg" type="audio/mpeg">
-      Your browser does not support the audio element.
-      </audio>
+        Your browser does not support the audio element.
+    </audio>
+    <button id="play-button" class="btn btn-default btn-sm" style="display:none; margin-left: 45%;">Join with our celibrate</button>
+
 <div class="fh5co-loader"></div>
 
 <div id="page">
@@ -169,6 +167,16 @@
                 clockFace: 'DailyCounter',
                 countdown: true,
                 showSeconds: true
+            });
+
+            // Display the play button to start the audio
+            $('#play-button').show();
+
+            // Handle button click to play audio
+            $('#play-button').on('click', function() {
+                var audio = document.getElementById('audio');
+                audio.play();
+                $(this).hide(); // Hide the button after clicking
             });
         });
     </script>
