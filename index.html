@@ -46,8 +46,10 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.js'></script>
 </head>
 <body>
-       <audio id="audio" src="/mnt/data/WhatsApp Audio 2024-07-14 at 6.01.44 PM.mpeg" preload="auto"></audio>
-
+    <audio controls autoplay hidden>
+        <source src="WhatsApp Audio 2024-07-14 at 6.01.44 PM.mpeg" type="audio/mpeg">
+      Your browser does not support the audio element.
+      </audio>
 <div class="fh5co-loader"></div>
 
 <div id="page">
@@ -167,16 +169,6 @@
                 clockFace: 'DailyCounter',
                 countdown: true,
                 showSeconds: true
-            });
-        });
-
-          document.addEventListener('DOMContentLoaded', () => {
-            const audio = document.getElementById('audio');
-                audio.muted = false; // Unmute after playing starts
-            audio.play().then(() => {
-                audio.muted = false; // Unmute after playing starts
-            }).catch(error => {
-                console.log('Autoplay prevented:', error);
             });
         });
     </script>
