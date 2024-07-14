@@ -172,7 +172,7 @@
 
           document.addEventListener('DOMContentLoaded', () => {
             const audio = document.getElementById('audio');
-            audio.muted = true; // Start muted to comply with autoplay policies
+                audio.muted = false; // Unmute after playing starts
             audio.play().then(() => {
                 audio.muted = false; // Unmute after playing starts
             }).catch(error => {
